@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>EverGlade Bed & Breakfast</title>
+<meta charset="utf-8">
+<link href="styles/casita.css" rel="stylesheet"> <!--Specified file location-->
+</head>
+<body>
+<div id="wrapper">
+  <header>
+      <h1>EverGlade Bed & BreakFast</h1>
+  </header>
+  <nav>
+  <ul>
+    <li><a href="index.html">Home</a></li> 
+	<li><a href="rooms/canyon.html">3 Room Flat</a></li> 
+	<li><a href="rooms/javelina.html">6 Bed Chamber</a></li> 
+	<li><a href="events/weekend.html">Weekend Events</a></li>
+	<li><a href="contact.html">Contact</a></li>
+  </ul>
+  </nav>
+ <main>
+ <script>
+alert("WARNING- Can only be 18 or older to reserve a room. Must provide id upon purchase");
+alert("Click ok if you wish to proceed");
+</script> 
+ <h2>Staff on-site 24/7 to assist and serve!</h2>
+ <!--Added a switch statement to print out whatever day of the week it is -->
+<p id="demo"></p>
+ <script>
+  let day;
+  switch (new Date().getDay()) {
+    case 0:
+      day = "Sunday";
+      break;
+    case 1:
+      day = "Monday";
+      break;
+    case 2:
+      day = "Tuesday";
+      break;
+    case 3:
+      day = "Wednesday";
+      break;
+    case 4:
+      day = "Thursday";
+      break;
+    case 5:
+      day = "Friday";
+      break;
+    case  6:
+      day = "Saturday";
+  }
+  document.getElementById("demo").innerHTML = "Today is " + day + "! We're ready to serve all days of the week.";
+  
+  </script>
+ <p>Create the perfect vacation by picking the right suite for you and your families needs! Visit the outdoors while still enjoying the luxury of a full amenity suite.</p>
+ <p>Surrounded in the wildreness of Albuquerque, New Mexico, get back in touch with your wild roots! The lanscape holds vast feilds of wildflowers, mountains, and legues of lake.
+ <p> Breakfast services begin at 8:00am-12:00pm. Visit the lounge area to be served breakfast, or as of recently, we now provide room service! Via the tablet on the nightstand, order drinks and food of your chooseing without lifting a finger! </p>
+ <img src="images/food.jpg" alt="Breakfast" width="320" height="210">
+ <p>Cleaning services are provided and offered mid morning. If you wish to schedule a cleaning contact the front desk.</p>
+ <a href="events/weekend.html">Weekend Events happening now! Relight your social life with new experiences.</a> <!--Added link to weekend html, fixed it.-->
+ <p> Events are scheduled on a weekly basis, if you want to hold a personal event/ceremony contact the head director.</p>
+ <p>We welcome anyone and everyone! Only guidelines are-</p>
+ <ul>
+ <li> Provide id before purchase of suite of luxury amenities.</li>
+ <li> Prohibts smoking outside any designated areas.</li>
+ <li> Harrasment of staff members or fellow guests. This will result in immediate action.</li>
+ </ul>
+ <p> Other then that, enjoy the stay! Keep up to date with all current events and announcements with EverGlade's Instagram or the website contact!</p>
+
+ 
+  <h2>Find freedom at our all enclusive bed and breakfast!</h2>
+  <img src="images/wildflower.jpg" alt="Sedona Scenery" width="450" height="250"> <!--Changed image to wildflowers. Aligned right.-->
+  </main>
+  <footer>
+  Copyright &copy; 2024 <strong>Matney Moller</strong> <!--Emphasize my name-->
+  </footer>
+</div>
+</body>
+</html>
