@@ -1,0 +1,165 @@
+header, nav, main, footer { display: block; }
+body { background-color: #330000;
+       font-family: Verdana, Arial, sans-serif;
+}
+#wrapper { width: 90%;
+           margin: auto;
+		   background-color: #d4a373; 		/*Changed from #F4E8BC to #d4a373*/
+		   color: #330000;
+		   box-shadow: 2px 2px 2px #000000; 		/*Changed box shadow size*/
+}
+p { text-align: justify;
+	font-family: Tenorite, serif, Arial;
+    font-size: 1em;
+}
+h1 { background-image: url(../images/flower_header.jpg); 		/*Changed Picture to flowers*/
+     background-repeat: repeat;
+     background-color: #bc6c25; /*Changed from #F4E8BC to#bc6c25*/
+	 height: 100px;		 /*Changed to 95px*/
+	 font-family: "Times New Roman", serif, Arial;
+	 font-size: 1.9em; 		/*Changed to 1.9em*/
+     padding-left: 220px;
+	 padding-top: 20px;
+	 text-shadow: 3px 3px 3px #90745D;
+	 margin-bottom: 0;
+}
+h2 { font-family: "Times New Roman", serif, Arial;
+     padding-top: 0px;			/*No padding*/
+	 font-size: 1.5em;
+}
+nav { padding-top: 0px; 		/*No padding*/
+      width: 90%; 
+	  background-position: right 0;
+}
+nav ul {
+	display: flex;
+	flex-direction: column;
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+nav li { padding: .5em 1em;
+       border-bottom: 1px solid;
+       font-weight: bold;
+	   width: 100%;
+}
+nav a { text-decoration: none; }
+nav a:link { color: #588157; } 		/*Changed from #330000 to #588157*/
+nav a:visited { color: #344e41; } 		/*Changed from #90745D to #344e41*/
+nav a:hover { color: #283618; } 		/*Changed from #3f4632 to #283618*/
+nav a:active { color: #610c09; } 		/*Created pseduclass for when the link is activated*/
+
+
+
+main { background-color: #faedcd; /*Changed from #FFFFCC to #faedcd*/
+          margin-left: 80px;
+		  padding: 2px;
+		  min-height: 100px;
+		  min-width: 200px; 	/*Added minimum width*/
+}
+
+main img { float: right;
+              padding: 20px;
+			  max-width: 400px;
+			  min-width: 100px;
+}
+
+footer { background-color: #ecf39e; 		/*Changed from #FFFFCC to #ecf39e*/
+       margin-left: 200px;
+       padding: 20px;
+       text-align: center;
+	   font-size: small;
+	   font-style: italic; 		/*Makes footer italic*/
+}
+form {
+	display: flex;
+	flex-direction:column;
+	padding: 1em;
+	width: 70%;
+}
+th, td { padding: 8px; }
+tr:nth-of-type(odd) {background-color: #D4e68E; }
+.topnav {
+	overflow: hidden;
+	background-color: #5F1307;
+}
+.topnav a {
+	  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+	  background-color: #ddd;
+  color: black;
+}
+
+/*Setting up for medium display*/
+@media (min-width: 600px) {
+	body { background-color: #330000;
+       font-family: Verdana, Arial, sans-serif;
+}
+p { text-align: justify;
+	font-family: Tenorite, serif, Arial;
+    font-size: 18px;
+}
+h1 { background-image: url(../images/flower_header.jpg); 		/*Changed Picture to flowers*/
+     background-repeat: repeat;
+     background-color: #bc6c25; /*Changed from #F4E8BC to#bc6c25*/
+	 height: 95px;		 /*Changed to 95px*/
+	 font-family: "Times New Roman", serif, Arial;
+	 font-size: 2.5em; 		/*Changed to 2.5em*/
+     padding-left: 220px;
+	 padding-top: 20px;
+	 text-shadow: 3px 3px 3px #90745D;
+	 margin-bottom: 0;
+}
+h2 { font-family: "Times New Roman", serif, Arial;
+     padding-top: 10px;
+}
+nav { padding-top: 10px;
+      float: left;   
+      width: 200px; 
+	  background-position: right 0;
+}
+nav ul { list-style-type: none; 
+		font-size: 1.1em;	/*Changed font size for medium display*/
+       padding-left: 10px;
+	   flex-flow: column nowrap; 		/*Added flex flow so the nav will stay visable*/
+}
+nav li { padding-bottom: 5px;
+	   border-bottom: 0px solid;
+       font-weight: bold;
+}
+nav a { text-decoration: none; }
+nav a:link { color: #588157; } 		/*Changed from #330000 to #588157*/
+nav a:visited { color: #344e41; } 		/*Changed from #90745D to #344e41*/
+nav a:hover { color: #283618; } 		/*Changed from #3f4632 to #283618*/
+nav a:active { color: #610c09; } 		/*Created pseduclass for when the link is activated*/
+
+
+
+main { background-color: #faedcd; /*Changed from #FFFFCC to #faedcd*/
+          margin-left: 200px;
+          padding: 1px 20px 20px 20px;   
+		  min-height: 300px;
+}
+
+main img { float: right;
+              padding: 20px;
+			  max-width: 400px;
+			  min-width: 100px;
+}
+
+footer { background-color: #ecf39e; 		/*Changed from #FFFFCC to #ecf39e*/
+       margin-left: 200px;
+       padding: 20px;
+       text-align: center;
+	   font-size: small;
+	   font-style: italic; 		/*Makes footer italic*/
+}
+}
+
