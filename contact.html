@@ -42,12 +42,13 @@
 		<details>
 		<summary>Front staff of Everglade Bed & Breakfast!</summary>
 		<p>Front desk will get to your call or message as soon as possible. A wait time of 3 minutes is average for these calls. Please be patient. </p>
+		<p>As a percation, please enter your email.(Use only @email.com) Use at least one letter in your email.</p>
 		</details>
 	<h2>Need more help?</h2>
 		<p>Fill out our form with your name and phone number, our staff will get back with you at the earliest convenience! Your information will be handled with ut most care.</p>
 		<!--Added a diffrent div in case of an error when filling out the form-->
 		<div id="error-message" style="display: none;"></div>
-		<form id="contact" action="/action_page.php" method="post" target="_blank">
+		<form id="contact" method="post" target="_blank">
 			<label for="fname">First name:</label>
 			<input type="text" id="fname" name="fname">
 			<br>
@@ -57,32 +58,17 @@
 			<label for="number">Phone Number:</label>
 			<input type="text" id="number" name="number">
 			<br>
+
+			<label for="email">Email Address:</label>
+			<input type="email" id="email" name="email" required><br><br>
+			<br>
 			<!--Added an onclick function so when user submits information it redirects them to aFunction-->
 			<!--If the window fails to pop up an error message will display-->
 			<input type="submit" onclick="aFunctionWithErrorHandling()" value="Submit">
+			<!--Link file for email js-->
+			<script src ="email.js" ddefer></script>
 		</form>
-		<script>
-			// Function to handle form submission and open a new window with a message
-			// Added error handling to check if the window opened successfully
-			//Changed so that the function is called and can run through the script
-			//Added a try/catch block to handle errors when opening the new window
-			function aFunctionWithErrorHandling() {
-				try {
-					let newWindow = window.open('', '_blank', 'width=400,height=300');
-					if (!newWindow) throw new Error("Popup blocked or failed to open.");
-					newWindow.document.write('<h1>Thank you for your submission!</h1>');
-					newWindow.document.write('<p>We will get back to you as soon as possible!</p>');
-					//If the window doesnt open, an error message will display
-					newWindow.document.close();
-				} catch (error) {
-					let errorMessage = document.getElementById("error-message");
-					errorMessage.innerHTML = "Oops! Something went wrong, please try again later.";
-					errorMessage.style.color = "red";
-					errorMessage.style.display = "block";
-				}
-			}
-		</script>
-		</form>
+
 	</main>
   <footer>
   Copyright &copy; 2024 <strong>Matney Moller </strong> <!--Emphasize my name-->
