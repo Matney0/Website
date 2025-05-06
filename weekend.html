@@ -6,7 +6,7 @@
 <!-- Fixed so the style sheet loads for each page -->
 <link href="../styles/casita.css" rel="stylesheet">
 
-<script src="../scripts/week.js" defer></script>
+<script src="../events/week.js" defer></script>
 
 </head> 
 <body>
@@ -28,9 +28,35 @@
   <p>As of this week, a bonfire is being held along EverGlade's beautiful forest trail. Located 50 meters from the trail sign, it's hard to miss!</p>
   <img src="../images/firepit.jpg" alt="Cozy campfire nestled in the forest, seating all around the fire" width="280" height="210"> 
   <p>Don't miss out on fun social ignited activities! Friends or family not staying at EverGlade Bed & Breakfast can join with the purchase of an event ticket.</p>
-  <script></script>
+  <p>Enter Zipcode to verify location:</p>
+  <form id="zipForm">
+    <input type="text" id="zipInput" name="zip" placeholder="Enter ZIP code" required>
+  </form>
+  <p id="zipResult"></p>
+  <script>
+    document.getElementById('zipInput').addEventListener('input', async () => {
+      const zip = document.getElementById('zipInput').value;
+
+      if (zip.length === 5) { // Only proceed if the input has 5 characters
+        try {
+          const mockResponse = { valid: /^[0-9]{5}$/.test(zip) }; // Validates 5-digit ZIP codes
+          const resultText = mockResponse.valid ? 'Valid ZIP code!' : 'Invalid ZIP code.';
+          document.getElementById('zipResult').textContent = resultText;
+        } catch (error) {
+          document.getElementById('zipResult').textContent = 'Error validating ZIP code.';
+        }
+      } else {
+        document.getElementById('zipResult').textContent = ''; 
+      }
+    });
+  </script>
   </main>
   <footer>
+  Copyright &copy; 2024 WebMaster
+  </footer>
+</div>
+</body>
+</html>
   Copyright &copy; 2024 WebMaster
   </footer>
 </div>
