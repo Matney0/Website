@@ -1,29 +1,15 @@
-// Class declaration for the Event class
-class Event {
-    constructor(name, date, location) {
-        this.name = name;
-        this.date = date;
-        this.location = location;
-    }
 
-    getDetails() {
-        return `${this.name} is happening on ${this.date} at ${this.location}.`;
-    }
+const express = require('express'); 
 
-    isToday() {
-        const today = new Date().toISOString().split('T')[0];
-        const eventDate = new Date(this.date).toISOString().split('T')[0];
-        return eventDate === today;
-    }
-}
+const app = express();
+const port = 3000;
 
-// Creating instances of the Event class
-const event1 = new Event("Music Concert", "2023-10-15", "City Hall");
-const event2 = new Event("Art Exhibition", "2023-10-16", "Art Gallery");
+const validZipCodes = new Set(['12345', '67890', '54321']);
+app.get('/verify-zip', (req, res) => {
+    const isValidZip = validZipCodes.has(req.query.zip);
+    res.json({ valid: isValidZip, message: isValidZip ? 'Verification complete' : 'Invalid ZIP code' });
+});
 
-// Using the methods
-console.log(event1.getDetails()); // Output: Music Concert is happening on 2023-10-15 at City Hall.
-console.log(event2.getDetails()); // Output: Art Exhibition is happening on 2023-10-16 at Art Gallery.
-
-console.log(event1.isToday()); // Output: true or false depending on the current date
-console.log(event2.isToday()); // Output: true or false depending on the current date
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
+});
